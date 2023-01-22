@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <changeSet id="2.0.1" author="PavloPolovyi">
+        <comment>Insert mock data</comment>
+        <comment>Degrees</comment>
+        <insert tableName="degrees">
+            <column name="id" value="1" />
+            <column name="degree_name" value="ASSISTANT" />
+        </insert>
+        <insert tableName="degrees">
+            <column name="id" value="2" />
+            <column name="degree_name" value="ASSOCIATIVE_PROFESSOR" />
+        </insert>
+        <insert tableName="degrees">
+            <column name="id" value="3" />
+            <column name="degree_name" value="PROFESSOR" />
+        </insert>
+        <comment>Lectors</comment>
+        <insert tableName="lectors">
+            <column name="id" value="1" />
+            <column name="name" value="Nyssa Burgess" />
+            <column name="degree_id" value="1" />
+            <column name="salary" value="5000" />
+        </insert>
+        <insert tableName="lectors">
+            <column name="id" value="2" />
+            <column name="name" value="Alea Finch" />
+            <column name="degree_id" value="2" />
+            <column name="salary" value="6000" />
+        </insert>
+        <insert tableName="lectors">
+            <column name="id" value="3" />
+            <column name="name" value="Linus Britt" />
+            <column name="degree_id" value="1" />
+            <column name="salary" value="5500" />
+        </insert>
+        <insert tableName="lectors">
+            <column name="id" value="4" />
+            <column name="name" value="Ivan Ivanov" />
+            <column name="degree_id" value="3" />
+            <column name="salary" value="9800" />
+        </insert>
+        <insert tableName="lectors">
+            <column name="id" value="5" />
+            <column name="name" value="Alice Dunlap" />
+            <column name="degree_id" value="1" />
+            <column name="salary" value="5300" />
+        </insert>
+        <insert tableName="lectors">
+            <column name="id" value="6" />
+            <column name="name" value="John Dou" />
+            <column name="degree_id" value="3" />
+            <column name="salary" value="11400" />
+        </insert>
+        <insert tableName="lectors">
+            <column name="id" value="7" />
+            <column name="name" value="Pavlo Polovyi" />
+            <column name="degree_id" value="1" />
+            <column name="salary" value="6000" />
+        </insert>
+        <comment>Departments</comment>
+        <insert tableName="departments">
+            <column name="id" value="1" />
+            <column name="name" value="Biological Sciences Department" />
+            <column name="head_lector_id" value="6" />
+        </insert>
+        <insert tableName="departments">
+            <column name="id" value="2" />
+            <column name="name" value="Astronomy and Astrophysics Department" />
+            <column name="head_lector_id" value="4" />
+        </insert>
+        <comment>Lectors_departments</comment>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="1" />
+            <column name="lector_id" value="6" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="2" />
+            <column name="lector_id" value="4" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="1" />
+            <column name="lector_id" value="1" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="1" />
+            <column name="lector_id" value="2" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="1" />
+            <column name="lector_id" value="3" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="1" />
+            <column name="lector_id" value="5" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="2" />
+            <column name="lector_id" value="1" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="2" />
+            <column name="lector_id" value="3" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="2" />
+            <column name="lector_id" value="7" />
+        </insert>
+        <insert tableName="lectors_departments">
+            <column name="department_id" value="2" />
+            <column name="lector_id" value="6" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>

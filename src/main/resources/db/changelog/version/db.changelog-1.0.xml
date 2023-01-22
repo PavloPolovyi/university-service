@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <changeSet id="1.0.1" author="PavloPolovyi">
+        <comment>Create table degrees</comment>
+        <createTable tableName="degrees">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="degree_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.2" author="PavloPolovyi">
+        <comment>Create table departments</comment>
+        <createTable tableName="departments">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="head_lector_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.3" author="PavloPolovyi">
+        <comment>Create table lectors</comment>
+        <createTable tableName="lectors">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="degree_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+            <column name="salary" type="NUMERIC">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.4" author="PavloPolovyi">
+        <comment>Create table lectors_departments</comment>
+        <createTable tableName="lectors_departments">
+            <column name="department_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+            <column name="lector_id" type="BIGINT">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="1.0.5" author="PavloPolovyi">
+        <comment>Constraint for departments head</comment>
+        <addForeignKeyConstraint baseTableName="departments" baseColumnNames="head_lector_id" constraintName="departments_head_fk-constraint" referencedTableName="lectors"
+                                 referencedColumnNames="id" />
+        <comment>Constraint for lectors degree</comment>
+        <addForeignKeyConstraint baseTableName="lectors" baseColumnNames="degree_id" constraintName="lectors_degree_fk-constraint" referencedTableName="degrees"
+                                 referencedColumnNames="id" />
+        <comment>Constraint for lectors_departments </comment>
+        <addForeignKeyConstraint baseTableName="lectors_departments" baseColumnNames="lector_id" constraintName="lectors_departments_lector_id_fk-constraint" referencedTableName="lectors"
+                                 referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="lectors_departments" baseColumnNames="department_id" constraintName="lectors_departments_department_id_fk-constraint" referencedTableName="departments"
+                                 referencedColumnNames="id" />
+    </changeSet>
+</databaseChangeLog>
