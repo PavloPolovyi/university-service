@@ -54,6 +54,6 @@ java -jar .\target\university-service-0.0.1-SNAPSHOT.jar --help
 ```
 
 You will see following response from the application:
-
+<img src="./img/example.png"/>
 
 

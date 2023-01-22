@@ -17,7 +17,7 @@ Created getter for field for tests
 @CommandLine.Command(name = "lectors",
         aliases = "lec",
         mixinStandardHelpOptions = true,
-        description = "Provides information about lectors")
+        description = "Provides information about lectors.")
 public class LectorCommand implements Runnable {
     @Getter(AccessLevel.NONE)
     private static final String HIGHLIGHT_ANSI_PATTERN = "@|bold,blue %s|@";

@@ -17,7 +17,7 @@ Created getters for fields for tests
 @CommandLine.Command(name = "departments",
         aliases = "dep",
         mixinStandardHelpOptions = true,
-        description = "Provides information about departments")
+        description = "Provides information about departments.")
 public class DepartmentCommand implements Runnable {
     @Getter(AccessLevel.NONE)
     private static final String COMMON_ANSI_PATTERN = "@|bold,blue %s|@";
