@@ -1,7 +1,7 @@
 ﻿# UNIVERSITY SERVICE
  
 <h2>📣 Project description 📣</h2>
-This is a simple java project with the console interface for university, which consists of departments and lectors. It is built up using <a href="https://spring.io/projects/spring-boot">Spring Boot</a> and <a href="https://picocli.info/">Picoli CLI framework</a>. It uses an in-memory H2 database, but it can be replaced any time. Users can get such information about the university department: head of department, average salary, employees count and summary statistics about academic degree of employees.
+This is a simple java project with the console interface for university, which consists of departments and lectors. It is built up using <a href="https://spring.io/projects/spring-boot">Spring Boot</a> and <a href="https://picocli.info/">Picoli CLI framework</a>. It uses an in-memory H2 database, but it can be replaced any time. Users can get such information about the university department: head of department, average salary, employees count and summary statistics about academic degree of employees. Moreover there is global search of lectors with ANSI highlighting of found patterns.
 
 <h2>Features</h2>
 
