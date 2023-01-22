@@ -1,7 +1,7 @@
 ﻿# UNIVERSITY SERVICE
  
 <h2>📣 Project description 📣</h2>
-This is a simple java project with the console interface for university, which consists of departments and lectors. It is built up using <a href="https://spring.io/projects/spring-boot">Spring Boot</a> and <a href="https://picocli.info/">Picoli CLI framework</a>. It uses an in-memory H2 database, but it can be replaced any time. Users can get such information about the university department: head of department, average salary, employees count and summary statistics about academic degree of employees.
+This is a simple java project with the console interface for university, which consists of departments and lectors. It is built up using <a href="https://spring.io/projects/spring-boot">Spring Boot</a> and <a href="https://picocli.info/">Picoli CLI framework</a>. It uses an in-memory H2 database, but it can be replaced any time. Users can get such information about the university department: head of department, average salary, employees count and summary statistics about academic degree of employees. Moreover there is a global search of lectors with ANSI highlighting of found patterns.
 
 <h2>Features</h2>
 
@@ -11,7 +11,7 @@ This is a simple java project with the console interface for university, which c
 
 * In-memory database H2
 
-* Tests for repository custom queries and main application
+* Tests for repository custom queries and SpringBootApplication class
 
 <h2>Technologies</h2>
 
@@ -26,6 +26,8 @@ This is a simple java project with the console interface for university, which c
 * Hibernate
 
 * Liquibase
+
+* Lombok
 
 * H2 database
 
@@ -56,4 +58,12 @@ java -jar .\target\university-service-0.0.1-SNAPSHOT.jar --help
 You will see following response from the application:
 <img src="./img/example.png"/>
 
+:four: Get help for subcommands:
 
+```bash
+java -jar .\target\university-service-0.0.1-SNAPSHOT.jar lec --help 
+```
+
+```bash
+java -jar .\target\university-service-0.0.1-SNAPSHOT.jar dep --help 
+```
