@@ -11,7 +11,7 @@ This is a simple java project with the console interface for university, which c
 
 * In-memory database H2
 
-* Tests for repository custom queries and main application
+* Tests for repository custom queries and SpringBootApplication class
 
 <h2>Technologies</h2>
 
@@ -26,6 +26,8 @@ This is a simple java project with the console interface for university, which c
 * Hibernate
 
 * Liquibase
+
+* Lombok
 
 * H2 database
 
